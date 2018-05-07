@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>Filter.EncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!--dep部门-->
+    <servlet>
+        <servlet-name>depservlet</servlet-name>
+        <servlet-class>servlet.depservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>depservlet</servlet-name>
+        <url-pattern>/depservlet</url-pattern>
+    </servlet-mapping>
+
+    <!--degree岗位-->
+    <servlet>
+        <servlet-name>degrees</servlet-name>
+        <servlet-class>servlet.degreesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>degrees</servlet-name>
+        <url-pattern>/degreesservlet</url-pattern>
+    </servlet-mapping>
+
+    <!--users用户-->
+    <servlet>
+        <servlet-name>users</servlet-name>
+        <servlet-class>servlet.usersservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>users</servlet-name>
+        <url-pattern>/usersservlet</url-pattern>
+    </servlet-mapping>
+
+    <!--单位表-->
+    <servlet>
+        <servlet-name>unitservlet</servlet-name>
+        <servlet-class>servlet.unitservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>unitservlet</servlet-name>
+        <url-pattern>/unitservlet</url-pattern>
+    </servlet-mapping>
+
+    <!--供应商表-->
+    <servlet>
+        <servlet-name>supplierservlet</servlet-name>
+        <servlet-class>servlet.supplierservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>supplierservlet</servlet-name>
+        <url-pattern>/supplierservlet</url-pattern>
+    </servlet-mapping>
+
+    <!--商品表-->
+    <servlet>
+        <servlet-name>productservlet</servlet-name>
+        <servlet-class>servlet.productservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productservlet</servlet-name>
+        <url-pattern>/productservlet</url-pattern>
+    </servlet-mapping>
+
+    <!--客户表-->
+    <servlet>
+        <servlet-name>customerinfoservlet</servlet-name>
+        <servlet-class>servlet.customerinfoservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>customerinfoservlet</servlet-name>
+        <url-pattern>/customerinfoservlet</url-pattern>
+    </servlet-mapping>
+
+    <!--合同表-->
+    <servlet>
+        <servlet-name>contractservlet</servlet-name>
+        <servlet-class>servlet.contractservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>contractservlet</servlet-name>
+        <url-pattern>/contractservlet</url-pattern>
+    </servlet-mapping>
+
+    <!--合同附件表-->
+    <servlet>
+        <servlet-name>contractattachservlet</servlet-name>
+        <servlet-class>servlet.contractattachservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>contractattachservlet</servlet-name>
+        <url-pattern>/contractattachservlet</url-pattern>
+    </servlet-mapping>
+
+    <!--订单表-->
+    <servlet>
+        <servlet-name>ordersservlet</servlet-name>
+        <servlet-class>servlet.ordersservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ordersservlet</servlet-name>
+        <url-pattern>/ordersservlet</url-pattern>
+    </servlet-mapping>
+
+    <!--订单明细表-->
+    <servlet>
+        <servlet-name>orderdetailservlet</servlet-name>
+        <servlet-class>servlet.orderdetailservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>orderdetailservlet</servlet-name>
+        <url-pattern>/orderdetailservlet</url-pattern>
+    </servlet-mapping>
+
+    <!--派工单表-->
+    <servlet>
+        <servlet-name>jobRecordservlet</servlet-name>
+        <servlet-class>servlet.jobrecordservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>jobRecordservlet</servlet-name>
+        <url-pattern>/jobrecordservlet</url-pattern>
+    </servlet-mapping>
+
+    <!--商务洽谈表-->
+    <servlet>
+        <servlet-name>businessservlet</servlet-name>
+        <servlet-class>servlet.businessservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>businessservlet</servlet-name>
+        <url-pattern>/businessservlet</url-pattern>
+    </servlet-mapping>
+
+    <!--客户联系表-->
+    <servlet>
+        <servlet-name>contactservlet</servlet-name>
+        <servlet-class>servlet.contactservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>contactservlet</servlet-name>
+        <url-pattern>/contactservlet</url-pattern>
+    </servlet-mapping>
+
+    <!--收款表表-->
+    <servlet>
+        <servlet-name>paidtypeservlet</servlet-name>
+        <servlet-class>servlet.paidtypeservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>paidtypeservlet</servlet-name>
+        <url-pattern>/paidtypeservlet</url-pattern>
+    </servlet-mapping>
+
+
+
+    <!--收款管理表-->
+    <servlet>
+        <servlet-name>financeservlet</servlet-name>
+        <servlet-class>servlet.financeservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>financeservlet</servlet-name>
+        <url-pattern>/financeservlet</url-pattern>
+    </servlet-mapping>
+
+    <!--开票信息表-->
+    <servlet>
+        <servlet-name>ticketservlet</servlet-name>
+        <servlet-class>servlet.ticketservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ticketservlet</servlet-name>
+        <url-pattern>/ticketservlet</url-pattern>
+    </servlet-mapping>
+
+    <!--收款表表-->
+    <servlet>
+        <servlet-name>workdayservlet</servlet-name>
+        <servlet-class>servlet.workdayservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>workdayservlet</servlet-name>
+        <url-pattern>/workdayservlet</url-pattern>
+    </servlet-mapping>
+
+    <!--客户总资料表-->
+    <servlet>
+        <servlet-name>shortinfor</servlet-name>
+        <servlet-class>servlet.shortinfor</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>shortinfor</servlet-name>
+        <url-pattern>/shortinfor</url-pattern>
+    </servlet-mapping>
+
+    <!--统计管理表-->
+    <servlet>
+        <servlet-name>tongji</servlet-name>
+        <servlet-class>servlet.TongJi</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>tongji</servlet-name>
+        <url-pattern>/tongji</url-pattern>
+    </servlet-mapping>
+
+    <!--用户业绩表-->
+    <servlet>
+        <servlet-name>userinfor</servlet-name>
+        <servlet-class>servlet.userinfor</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userinfor</servlet-name>
+        <url-pattern>/userinfor</url-pattern>
+    </servlet-mapping>
+</web-app>
